@@ -1,0 +1,38 @@
+#N canvas 2393 0 798 808 10;
+#X obj 51 91 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 45 69 Carrier frequency;
+#X obj 48 124 mtof~;
+#X obj 49 239 +~;
+#X obj 48 282 osc~;
+#X obj 49 340 dac~;
+#X obj 95 340 tabwrite~ output;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array output 100 float 5;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 213 220 graph;
+#X obj 107 304 metro 50;
+#X obj 107 281 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 105 149 5 0 0 0 - - -;
+#X obj 105 177 osc~;
+#X obj 106 212 *~;
+#X floatatom 142 177 5 0 0 0 - - -;
+#X text 144 150 Modulation frequency (Hz);
+#X text 177 174 Modulation amount (Hz);
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 8 0 6 0;
+#X connect 9 0 8 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 3 1;
+#X connect 13 0 12 1;
