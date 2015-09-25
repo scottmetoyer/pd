@@ -1,0 +1,12 @@
+#N canvas 211 163 646 558 10;
+#X obj 47 26 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4300 1;
+#X obj 44 53 mtof;
+#X obj 44 79 phasor~;
+#X obj 45 105 expr~ ($v1 > 0.5) * 2 - 1;
+#X obj 46 141 dac~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
