@@ -1,6 +1,5 @@
-#N canvas 326 144 751 537 10;
+#N canvas 540 113 751 537 10;
 #X obj 73 65 adc~;
-#X obj 88 155 receive~;
 #X obj 73 191 +~;
 #X obj 73 218 tabwrite~ loop;
 #X obj 106 79 pack 0 5;
@@ -9,12 +8,17 @@
 #X obj 106 34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 129 33 Record;
-#X text 67 263 https://guitarextended.files.wordpress.com/2013/08/pd-looper.jpg
+#X text 54 430 https://guitarextended.files.wordpress.com/2013/08/pd-looper.jpg
 ;
-#X connect 0 0 6 0;
-#X connect 1 0 2 1;
-#X connect 2 0 3 0;
-#X connect 4 0 5 0;
-#X connect 5 0 6 1;
-#X connect 6 0 2 0;
-#X connect 7 0 4 0;
+#X obj 124 160 r stop_looping;
+#X obj 124 182 r new_cycle;
+#X obj 124 138 r~ main_out;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 1;
+#X connect 5 0 1 0;
+#X connect 6 0 3 0;
+#X connect 9 0 2 0;
+#X connect 10 0 2 0;
+#X connect 11 0 1 1;
