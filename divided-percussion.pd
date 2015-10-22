@@ -21,34 +21,34 @@
 #X floatatom 133 248 5 0 0 0 - - -;
 #X floatatom 172 248 5 0 0 0 - - -;
 #X floatatom 211 248 5 0 0 0 - - -;
-#X obj 783 197 openpanel;
+#X obj 475 197 openpanel;
 #X obj 134 367 dac~;
-#X obj 783 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 475 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array perc1 5878 float 0;
 #X coords 0 1 5877 -1 200 140 1;
-#X restore 578 33 graph;
+#X restore 270 33 graph;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array perc2 3477 float 0;
 #X coords 0 1 3476 -1 200 140 1;
-#X restore 783 33 graph;
+#X restore 475 33 graph;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array perc3 1465 float 0;
 #X coords 0 1 1464 -1 200 140 1;
-#X restore 988 33 graph;
-#X obj 783 239 soundfiler;
-#X obj 578 197 openpanel;
-#X obj 578 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X restore 680 33 graph;
+#X obj 475 239 soundfiler;
+#X obj 270 197 openpanel;
+#X obj 270 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 578 239 soundfiler;
-#X obj 988 197 openpanel;
-#X obj 988 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 270 239 soundfiler;
+#X obj 680 197 openpanel;
+#X obj 680 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 988 239 soundfiler;
-#X msg 578 218 read -resize \$1 percussion1;
-#X msg 783 218 read -resize \$1 percussion2;
-#X msg 988 218 read -resize \$1 percussion3;
+#X obj 680 239 soundfiler;
+#X msg 270 218 read -resize \$1 percussion1;
+#X msg 475 218 read -resize \$1 percussion2;
+#X msg 680 218 read -resize \$1 percussion3;
 #N canvas 1939 386 450 265 step-list 0;
 #X obj 20 46 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
 -1 2;
@@ -107,8 +107,8 @@
 #X connect 17 0 2 0;
 #X connect 18 0 2 0;
 #X connect 19 0 0 0;
-#X restore 133 283 pd step-list;
-#N canvas 1939 386 450 265 step-list 1;
+#X restore 133 279 pd step-list;
+#N canvas 1939 386 450 265 step-list 0;
 #X obj 20 46 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
 -1 2;
 #X obj 20 97 select 0 1 2 3 4 5 6 7;
@@ -166,7 +166,7 @@
 #X connect 17 0 2 0;
 #X connect 18 0 2 0;
 #X connect 19 0 0 0;
-#X restore 225 283 pd step-list;
+#X restore 225 279 pd step-list;
 #N canvas 1939 386 450 265 step-list 0;
 #X obj 20 46 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
 -1 2;
@@ -225,10 +225,10 @@
 #X connect 17 0 2 0;
 #X connect 18 0 2 0;
 #X connect 19 0 0 0;
-#X restore 317 283 pd step-list;
-#X obj 133 308 tabplay~ perc1;
-#X obj 225 307 tabplay~ perc2;
-#X obj 317 307 tabplay~ perc3;
+#X restore 317 279 pd step-list;
+#X obj 133 304 tabplay~ perc1;
+#X obj 225 303 tabplay~ perc2;
+#X obj 317 303 tabplay~ perc3;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 1;
