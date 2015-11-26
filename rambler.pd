@@ -1,0 +1,20 @@
+#N canvas 167 184 450 300 10;
+#X obj 181 152 makenote;
+#X obj 181 180 noteout;
+#X floatatom 208 45 5 0 0 0 - - -;
+#X floatatom 286 69 5 0 0 0 - - -;
+#X floatatom 325 69 5 0 0 0 - - -;
+#X obj 181 46 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 181 97 random;
+#X obj 181 70 metro;
+#X floatatom 247 69 5 0 0 0 - - -;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 2 0 7 1;
+#X connect 3 0 0 1;
+#X connect 4 0 0 2;
+#X connect 5 0 7 0;
+#X connect 6 0 0 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 1;
