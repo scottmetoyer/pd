@@ -10,12 +10,12 @@
 #X obj 434 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array perc1 162938 float 0;
-#X coords 0 1 162937 -1 200 140 1;
+#X array perc1 3526 float 0;
+#X coords 0 1 3525 -1 200 140 1;
 #X restore 228 23 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array perc2 171194 float 0;
-#X coords 0 1 171193 -1 200 140 1;
+#X array perc2 7292 float 0;
+#X coords 0 1 7291 -1 200 140 1;
 #X restore 434 23 graph;
 #X obj 434 229 soundfiler;
 #X obj 228 187 openpanel;
@@ -28,7 +28,7 @@
 #X obj 640 229 soundfiler;
 #N canvas 647 118 516 560 step-list 0;
 #X obj 20 48 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 4;
 #X obj 20 99 select 0 1 2 3 4 5 6 7;
 #X obj 20 133 sel 1;
 #X obj 35 65 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -87,7 +87,7 @@
 #X restore 212 462 pd step-list;
 #N canvas 659 386 450 265 step-list 0;
 #X obj 30 56 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 1;
 #X obj 30 107 select 0 1 2 3 4 5 6 7;
 #X obj 30 141 sel 1;
 #X obj 45 73 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
@@ -146,7 +146,7 @@
 #X restore 419 462 pd step-list;
 #N canvas 659 386 450 265 step-list 0;
 #X obj 20 46 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 4;
 #X obj 20 97 select 0 1 2 3 4 5 6 7;
 #X obj 20 131 sel 1;
 #X obj 35 63 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -212,17 +212,17 @@
 #X obj 265 383 line;
 #X msg 357 355 stop;
 #X obj 230 252 hsl 128 15 8 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 3362 1;
 #X obj 265 274 sel 1;
 #X floatatom 434 355 5 0 0 0 - - -;
 #X obj 472 383 line;
 #X obj 437 252 hsl 128 15 8 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 9135 1;
 #X obj 472 274 sel 1;
 #X floatatom 639 355 5 0 0 0 - - -;
 #X obj 677 383 line;
 #X obj 642 251 hsl 128 15 8 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 3639 1;
 #X obj 677 273 sel 1;
 #X obj 212 383 r count;
 #X obj 419 383 r count;
@@ -540,8 +540,8 @@ to fully control the internals of the patch with no range-limits;
 #X connect 37 0 8 0;
 #X restore 981 169 pd ringmod;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array perc3 47478 float 0;
-#X coords 0 1 47477 -1 200 140 1;
+#X array perc3 14294 float 0;
+#X coords 0 1 14293 -1 200 140 1;
 #X restore 640 23 graph;
 #X obj 848 228 mixer~ 8 --------------------;
 #X obj 848 260 dac~;
@@ -594,8 +594,8 @@ to fully control the internals of the patch with no range-limits;
 #X obj 922 451 s t2;
 #X obj 996 451 s t3;
 #X obj 117 39 nbx 5 14 1 1000 0 1 empty empty bpm 0 -8 0 10 -262144
--1 -1 560 256;
-#N canvas 126 130 450 300 transport 0;
+-1 -1 260 256;
+#N canvas 151 186 450 300 transport 0;
 #X obj 111 131 float;
 #X obj 161 130 + 1;
 #X floatatom 111 160 5 0 0 0 - - -;
@@ -605,22 +605,24 @@ to fully control the internals of the patch with no range-limits;
 #X obj 111 100 metro;
 #X obj 58 44 inlet;
 #X obj 138 44 inlet;
-#X text 57 32 comment;
 #X obj 58 242 outlet;
-#X obj 111 242 outlet;
+#X obj 110 242 outlet;
 #X obj 138 74 expr 60000 / $f1;
+#X text 57 32;
+#X obj 162 189 s pulse;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 1 0 0 1;
 #X connect 2 0 3 0;
-#X connect 4 0 10 0;
-#X connect 5 0 11 0;
+#X connect 4 0 9 0;
+#X connect 5 0 10 0;
 #X connect 6 0 0 0;
+#X connect 6 0 13 0;
 #X connect 7 0 4 0;
 #X connect 7 0 5 0;
 #X connect 7 0 6 0;
-#X connect 8 0 12 0;
-#X connect 12 0 6 1;
+#X connect 8 0 11 0;
+#X connect 11 0 6 1;
 #X restore 48 62 pd transport;
 #X obj 48 87 s start;
 #X obj 117 87 s stop;
@@ -635,15 +637,10 @@ to fully control the internals of the patch with no range-limits;
 #X obj 305 569 random 2500;
 #X obj 305 593 s r4;
 #X obj 1066 22 r r4;
-#N canvas 460 24 757 603 rambler 0;
+#N canvas 460 24 757 603 rambler 1;
 #X obj 141 227 makenote;
 #X obj 141 255 noteout;
-#X floatatom 196 38 5 0 0 0 - - -;
-#X obj 141 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 141 63 metro;
 #X obj 100 227 print;
-#X msg 159 38 stop;
 #X obj 141 162 drunk;
 #X obj 254 36 table Cmajor 27;
 #X msg 254 58 \; Cmajor 0 48 50 52 53 55 57 59 60 62 64 65 67 69 71
@@ -655,22 +652,20 @@ to fully control the internals of the patch with no range-limits;
 #X obj 205 178 + 90;
 #X obj 270 181 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 500 256;
+#X obj 141 123 r pulse;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
-#X connect 2 0 4 1;
-#X connect 3 0 4 0;
-#X connect 4 0 7 0;
-#X connect 4 0 13 0;
-#X connect 6 0 4 0;
-#X connect 7 0 11 0;
-#X connect 10 0 7 0;
-#X connect 11 0 0 0;
-#X connect 11 0 5 0;
-#X connect 12 0 11 0;
-#X connect 13 0 14 0;
-#X connect 14 0 0 1;
-#X connect 15 0 0 2;
-#X restore 437 595 pd rambler;
+#X connect 3 0 7 0;
+#X connect 6 0 3 0;
+#X connect 7 0 0 0;
+#X connect 7 0 2 0;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 1;
+#X connect 11 0 0 2;
+#X connect 12 0 3 0;
+#X connect 12 0 9 0;
+#X restore 46 194 pd rambler;
 #X connect 0 0 4 0;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
@@ -734,6 +729,7 @@ to fully control the internals of the patch with no range-limits;
 #X connect 57 5 58 0;
 #X connect 57 6 58 0;
 #X connect 57 7 58 0;
+#X connect 57 7 59 0;
 #X connect 58 0 64 0;
 #X connect 59 0 65 0;
 #X connect 59 1 65 0;
