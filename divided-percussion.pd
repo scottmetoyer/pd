@@ -146,7 +146,7 @@
 #X restore 419 462 pd step-list;
 #N canvas 659 386 450 265 step-list 0;
 #X obj 20 46 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 2;
+-1 0;
 #X obj 20 97 select 0 1 2 3 4 5 6 7;
 #X obj 20 131 sel 1;
 #X obj 35 63 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -212,24 +212,24 @@
 #X obj 265 383 line;
 #X msg 357 355 stop;
 #X obj 230 252 hsl 128 15 8 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2481 1;
+-1 -1 0 1;
 #X obj 265 274 sel 1;
 #X floatatom 434 355 5 0 0 0 - - -;
 #X obj 472 383 line;
 #X obj 437 252 hsl 128 15 8 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2573 1;
+-1 -1 0 1;
 #X obj 472 274 sel 1;
 #X floatatom 639 355 5 0 0 0 - - -;
 #X obj 677 383 line;
 #X obj 642 251 hsl 128 15 8 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5480 1;
+-1 -1 0 1;
 #X obj 677 273 sel 1;
 #X obj 212 383 r count;
 #X obj 419 383 r count;
 #X obj 624 383 r count;
 #X obj 305 274 r start;
 #X obj 357 274 r stop;
-#X text 47 22 run/stop;
+#X text 42 235 run/stop;
 #X msg 565 355 stop;
 #X obj 513 274 r start;
 #X obj 565 274 r stop;
@@ -562,21 +562,21 @@ to fully control the internals of the patch with no range-limits;
 #X text 848 291 variance over time;
 #X obj 848 380 sel 1;
 #X floatatom 848 358 5 0 0 0 - - -;
-#X obj 47 116 ctlin 0;
-#X obj 48 39 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
-;
+#X obj 42 329 ctlin 0;
+#X obj 43 252 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 298 295 r t1;
-#X obj 47 137 * 60;
+#X obj 42 350 * 60;
 #X floatatom 298 315 5 0 0 0 - - -;
 #X msg 265 355 set 8 \, 1 \$1;
 #X obj 265 334 f 2000;
-#X obj 47 158 + 100;
-#X obj 97 137 * 60;
-#X obj 97 158 + 100;
-#X obj 147 137 * 60;
-#X obj 147 158 + 100;
-#X obj 97 116 ctlin 1;
-#X obj 147 116 ctlin 2;
+#X obj 42 371 + 100;
+#X obj 92 350 * 60;
+#X obj 92 371 + 100;
+#X obj 142 350 * 60;
+#X obj 142 371 + 100;
+#X obj 92 329 ctlin 1;
+#X obj 142 329 ctlin 2;
 #X floatatom 505 315 5 0 0 0 - - -;
 #X obj 505 295 r t2;
 #X msg 472 355 set 8 \, 1 \$1;
@@ -594,7 +594,7 @@ to fully control the internals of the patch with no range-limits;
 #X obj 996 428 + 100;
 #X obj 922 451 s t2;
 #X obj 996 451 s t3;
-#X obj 117 39 nbx 5 14 1 1000 0 1 empty empty bpm 0 -8 0 10 -262144
+#X obj 112 252 nbx 5 14 1 1000 0 1 empty empty bpm 0 -8 0 10 -262144
 -1 -1 504 256;
 #N canvas 151 186 450 300 transport 0;
 #X obj 111 131 float;
@@ -624,9 +624,9 @@ to fully control the internals of the patch with no range-limits;
 #X connect 7 0 6 0;
 #X connect 8 0 11 0;
 #X connect 11 0 6 1;
-#X restore 48 62 pd transport;
-#X obj 48 87 s start;
-#X obj 117 87 s stop;
+#X restore 43 275 pd transport;
+#X obj 43 300 s start;
+#X obj 112 300 s stop;
 #X floatatom 548 514 5 0 0 0 - - -;
 #X floatatom 748 544 5 0 0 0 - - -;
 #X obj 305 516 / 100;
@@ -651,8 +651,8 @@ to fully control the internals of the patch with no range-limits;
 #X msg 42 151 set Cmajor;
 #X obj 205 154 random 37;
 #X obj 205 178 + 90;
-#X obj 270 181 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
-10 -262144 -1 -1 500 256;
+#X obj 270 181 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 500 256;
 #X obj 141 123 r pulse;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
@@ -666,11 +666,12 @@ to fully control the internals of the patch with no range-limits;
 #X connect 11 0 0 2;
 #X connect 12 0 3 0;
 #X connect 12 0 9 0;
-#X restore 46 194 pd rambler;
+#X restore 41 407 pd rambler;
 #X obj 1053 287 writesf~;
 #X msg 1053 232 open output.wav;
 #X msg 1076 256 start;
 #X msg 1119 256 stop;
+#X obj 47 83 midiclkin;
 #X connect 0 0 4 0;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
