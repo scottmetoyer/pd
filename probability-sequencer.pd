@@ -1,7 +1,7 @@
-#N canvas 1899 51 430 411 10;
+#N canvas 1598 2 430 411 10;
 #X declare -lib mrpeach;
 #X text 6 36 run/stop;
-#X obj 7 53 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 7 53 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 76 53 nbx 5 14 1 1000 0 1 empty empty bpm 0 -8 0 10 -262144
 -1 -1 112 256;
@@ -66,16 +66,16 @@
 #X restore 7 15 pd osc-input;
 #N canvas 2147 407 450 300 clear_automation 0;
 #X msg -338 55 \; cc1 const 0 \;;
-#X msg -253 55 \; cc1 const 0 \;;
-#X msg -167 55 \; cc1 const 0 \;;
 #X obj -338 23 inlet;
-#X connect 3 0 0 0;
-#X connect 3 0 1 0;
-#X connect 3 0 2 0;
+#X msg -253 55 \; cc2 const 0 \;;
+#X msg -167 55 \; cc3 const 0 \;;
+#X connect 1 0 0 0;
+#X connect 1 0 2 0;
+#X connect 1 0 3 0;
 #X restore 152 95 pd clear_automation;
 #X obj 152 78 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#N canvas 486 113 957 615 track_1 1;
+#N canvas 2230 5 957 615 track_1 1;
 #X floatatom 16 80 5 0 100 0 - - -;
 #X floatatom 52 80 5 0 0 0 - - -;
 #X floatatom 88 80 5 0 0 0 - - -;
@@ -95,7 +95,7 @@
 #X obj 11 5 r count;
 #X obj 11 22 mod 16;
 #X obj 11 44 hradio 36 1 0 16 empty empty empty 0 -8 0 10 -262144 -1
--1 2;
+-1 5;
 #X obj 11 96 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
 #X obj 11 135 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -148,9 +148,9 @@
 #X obj 554 113 trg;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array cc1 64 float 1;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 5.44278 39.9137 61.6848 67.1276 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-23.5854 56.242 54.4278 47.1707 34.4709 21.7711 0 0 0 0 0;
+#A 0 167 173 176 0 174 155 147 142 0 0 0 0 0 0 0 0 0 0 0 143 145 0
+0 0 147 148 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 130 132
+136 0 0 0 0 139 143 149 152 155 160;
 #X coords 0 127 63 0 576 70 1 0 0;
 #X restore 12 171 graph;
 #X obj 593 188 mod 64;
@@ -159,16 +159,16 @@
 #X floatatom 593 225 5 0 0 0 - - -;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array cc2 64 float 1;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 5.44278 39.9137 61.6848 67.1276 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-23.5854 56.242 54.4278 47.1707 34.4709 21.7711 0 0 0 0 0;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 130
+119 0 0 0 125 120 118 0 0 117 0 0 0 0 0 0 0 122 125 0 0 126 125 119
+118 0 0 117 0 0 0 0 0 0;
 #X coords 0 127 63 0 576 70 1 0 0;
 #X restore 12 260 graph;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array cc3 64 float 1;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 5.44278 39.9137 61.6848 67.1276 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-23.5854 56.242 54.4278 47.1707 34.4709 21.7711 0 0 0 0 0;
+#A 0 0 0 0 0 0 0 0 0 0 39 37 0 0 0 0 41 44 45 0 0 0 0 0 0 0 42 36 35
+0 46 56 59 0 0 0 0 0 0 0 0 0 55 48 46 0 45 65 102 110 111 0 0 0 0 0
+0 0 0 96 80 72 0 0 0;
 #X coords 0 127 63 0 576 70 1 0 0;
 #X restore 12 350 graph;
 #X obj 593 277 mod 64;
@@ -183,6 +183,21 @@
 #X obj 700 420 outlet;
 #X obj 744 420 outlet;
 #X obj 583 150 outlet;
+#X obj 667 205 tabwrite cc1;
+#X obj 672 294 tabwrite cc2;
+#X obj 672 384 tabwrite cc3;
+#X floatatom 672 273 5 0 0 0 - - -;
+#X floatatom 672 363 5 0 0 0 - - -;
+#X floatatom 667 184 5 0 0 0 - - -;
+#X msg 747 192 \; cc1 const 0 \;;
+#X msg 752 281 \; cc2 const 0 \;;
+#X msg 752 371 \; cc3 const 0 \;;
+#X text 744 173 clear cc;
+#X text 749 262 clear cc;
+#X text 749 353 clear cc;
+#X obj 667 162 ctlin 33 1 1;
+#X obj 672 250 ctlin 34 1 1;
+#X obj 673 340 ctlin 35 1 1;
 #X connect 0 0 37 1;
 #X connect 1 0 38 1;
 #X connect 2 0 39 1;
@@ -251,17 +266,26 @@
 #X connect 51 0 34 0;
 #X connect 52 0 35 0;
 #X connect 54 0 56 0;
+#X connect 54 0 72 1;
 #X connect 55 0 54 0;
 #X connect 56 0 57 0;
 #X connect 57 0 68 0;
 #X connect 60 0 66 0;
+#X connect 60 0 73 1;
 #X connect 61 0 60 0;
 #X connect 62 0 69 0;
 #X connect 63 0 67 0;
+#X connect 63 0 74 1;
 #X connect 64 0 63 0;
 #X connect 65 0 70 0;
 #X connect 66 0 62 0;
 #X connect 67 0 65 0;
+#X connect 75 0 73 0;
+#X connect 76 0 74 0;
+#X connect 77 0 72 0;
+#X connect 84 0 77 0;
+#X connect 85 0 75 0;
+#X connect 86 0 76 0;
 #X restore 6 131 pd track_1;
 #X connect 1 0 3 0;
 #X connect 2 0 3 1;
