@@ -1,0 +1,13 @@
+#N canvas 115 232 381 187 10;
+#X obj 34 58 inlet;
+#X obj 138 58 inlet;
+#X obj 216 58 inlet;
+#X text 33 37 trackpad on/off;
+#X text 137 37 x value;
+#X text 214 37 y value;
+#X obj 138 99 ctlout 12 1;
+#X obj 216 99 ctlout 13 1;
+#X obj 34 96 ctlout 92 1;
+#X connect 0 0 8 0;
+#X connect 1 0 6 0;
+#X connect 2 0 7 0;
