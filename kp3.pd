@@ -5,9 +5,9 @@
 #X text 31 38 trackpad on/off;
 #X text 137 38 x value;
 #X text 214 38 y value;
-#X obj 138 99 ctlout 12 1;
-#X obj 216 99 ctlout 13 1;
-#X obj 34 96 ctlout 92 1;
-#X connect 0 0 8 0;
-#X connect 1 0 6 0;
-#X connect 2 0 7 0;
+#X obj 34 96 ctlout 92 3;
+#X obj 138 99 ctlout 12 3;
+#X obj 216 98 ctlout 13 3;
+#X connect 0 0 6 0;
+#X connect 1 0 7 0;
+#X connect 2 0 8 0;
