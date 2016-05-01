@@ -1,4 +1,4 @@
-#N canvas 1592 -8 1600 817 10;
+#N canvas 0 50 1600 817 10;
 #X text 114 -2 run/stop;
 #X obj 96 0 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
@@ -51,62 +51,61 @@
 #X restore 4 19 pd transport;
 #X obj 96 19 s start;
 #X obj 152 19 s stop;
-#N canvas 165 81 450 300 osc-input 0;
+#N canvas 1790 173 450 300 osc-input 0;
 #X obj 24 72 unpackOSC;
 #X obj 24 43 udpreceive 9001;
 #X obj 145 140 routeOSC /str;
 #X obj 24 138 outlet;
-#X obj 23 9 import mrpeach;
 #X obj 24 109 routeOSC /play /beat;
-#X connect 0 0 5 0;
+#X connect 0 0 4 0;
 #X connect 1 0 0 0;
-#X connect 5 0 3 0;
-#X connect 5 2 2 0;
-#X restore 4 2 pd osc-input;
+#X connect 4 0 3 0;
+#X connect 4 2 2 0;
+#X restore 4 0 pd osc-input;
 #X obj 933 1088 kp3;
 #X obj 916 1089 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
-#X floatatom 6 95 5 0 100 0 - - -, f 5;
-#X floatatom 39 95 5 0 100 0 - - -, f 5;
-#X floatatom 72 95 5 0 100 0 - - -, f 5;
-#X floatatom 105 95 5 0 100 0 - - -, f 5;
-#X floatatom 147 95 5 0 100 0 - - -, f 5;
-#X floatatom 180 95 5 0 100 0 - - -, f 5;
-#X floatatom 213 95 5 0 100 0 - - -, f 5;
-#X floatatom 246 95 5 0 100 0 - - -, f 5;
-#X floatatom 289 95 5 0 100 0 - - -, f 5;
-#X floatatom 322 95 5 0 100 0 - - -, f 5;
-#X floatatom 355 95 5 0 100 0 - - -, f 5;
-#X floatatom 388 95 5 0 100 0 - - -, f 5;
-#X floatatom 430 95 5 0 100 0 - - -, f 5;
-#X floatatom 463 95 5 0 100 0 - - -, f 5;
-#X floatatom 496 95 5 0 100 0 - - -, f 5;
-#X floatatom 529 95 5 0 100 0 - - -, f 5;
+#X floatatom 6 96 5 0 100 0 - - -, f 5;
+#X floatatom 39 96 5 0 100 0 - - -, f 5;
+#X floatatom 72 96 5 0 100 0 - - -, f 5;
+#X floatatom 105 96 5 0 100 0 - - -, f 5;
+#X floatatom 147 96 5 0 100 0 - - -, f 5;
+#X floatatom 180 96 5 0 100 0 - - -, f 5;
+#X floatatom 213 96 5 0 100 0 - - -, f 5;
+#X floatatom 246 96 5 0 100 0 - - -, f 5;
+#X floatatom 289 96 5 0 100 0 - - -, f 5;
+#X floatatom 322 96 5 0 100 0 - - -, f 5;
+#X floatatom 355 96 5 0 100 0 - - -, f 5;
+#X floatatom 388 96 5 0 100 0 - - -, f 5;
+#X floatatom 430 96 5 0 100 0 - - -, f 5;
+#X floatatom 463 96 5 0 100 0 - - -, f 5;
+#X floatatom 496 96 5 0 100 0 - - -, f 5;
+#X floatatom 529 96 5 0 100 0 - - -, f 5;
 #X obj 4 41 r count;
 #X obj 3 59 hradio 35 1 0 16 empty empty empty 0 -8 0 10 -262144 -1
--1 5;
-#X obj 3 111 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
-#X obj 3 128 trg;
-#X obj 40 128 trg;
-#X obj 78 128 trg;
-#X obj 114 128 trg;
-#X obj 150 128 trg;
-#X obj 185 128 trg;
-#X obj 220 128 trg;
-#X obj 256 128 trg;
-#X obj 294 128 trg;
-#X obj 331 128 trg;
-#X obj 366 128 trg;
-#X obj 401 128 trg;
-#X obj 438 128 trg;
-#X obj 474 128 trg;
-#X obj 511 128 trg;
-#X obj 546 128 trg;
-#X obj 522 145 noteout;
-#X msg 412 144 36 127 10;
-#X obj 87 42 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0 10
+-1 6;
+#X obj 3 112 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 3 125 trg;
+#X obj 40 129 trg;
+#X obj 78 129 trg;
+#X obj 114 129 trg;
+#X obj 150 129 trg;
+#X obj 185 129 trg;
+#X obj 220 129 trg;
+#X obj 256 129 trg;
+#X obj 294 129 trg;
+#X obj 331 129 trg;
+#X obj 366 129 trg;
+#X obj 401 129 trg;
+#X obj 438 129 trg;
+#X obj 474 129 trg;
+#X obj 511 129 trg;
+#X obj 546 129 trg;
+#X obj 522 146 noteout;
+#X msg 401 146 36 127 10;
+#X obj 90 42 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 16 256;
-#X obj 58 42 mod;
+#X obj 61 41 mod;
 #X obj 912 55 r count_x4;
 #X obj 912 72 tabread cc1;
 #X floatatom 912 89 5 0 0 0 - - -, f 5;
@@ -119,11 +118,11 @@
 #X obj 989 55 mod;
 #X obj 1096 41 vradio 10 1 1 10 empty empty empty 0 -8 0 10 -262144
 -1 -1 9;
-#X obj 478 145 spigot;
-#X obj 238 42 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 474 146 spigot;
+#X obj 241 42 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X text 257 40 midi on/off;
-#N canvas 1685 211 854 500 er1-parameter-send 0;
+#X text 260 40 midi on/off;
+#N canvas 2236 252 854 500 er1-parameter-send 0;
 #X obj -370 25 inlet;
 #X obj -199 25 inlet;
 #X obj -370 78 s pitch1;
@@ -1308,13 +1307,13 @@
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 127 64 0 330 70 1 0 0;
-#X restore 576 55 graph;
+#X restore 578 55 graph;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array cc2 64 float 3;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 127 64 0 330 70 1 0 0;
-#X restore 576 159 graph;
+#X restore 578 159 graph;
 #X obj 912 159 r count_x4;
 #X floatatom 912 193 5 0 0 0 - - -, f 5;
 #X obj 1016 159 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8
@@ -1406,46 +1405,46 @@
 #X connect 16 0 9 0;
 #X connect 17 0 10 0;
 #X restore 199 222 pd er1-parameter-send;
-#X floatatom 6 304 5 0 100 0 - - -, f 5;
-#X floatatom 39 304 5 0 100 0 - - -, f 5;
-#X floatatom 72 304 5 0 100 0 - - -, f 5;
-#X floatatom 105 304 5 0 100 0 - - -, f 5;
-#X floatatom 147 304 5 0 100 0 - - -, f 5;
-#X floatatom 180 304 5 0 100 0 - - -, f 5;
-#X floatatom 213 304 5 0 100 0 - - -, f 5;
-#X floatatom 246 304 5 0 100 0 - - -, f 5;
-#X floatatom 289 304 5 0 100 0 - - -, f 5;
-#X floatatom 322 304 5 0 100 0 - - -, f 5;
-#X floatatom 355 304 5 0 100 0 - - -, f 5;
-#X floatatom 388 304 5 0 100 0 - - -, f 5;
-#X floatatom 430 304 5 0 100 0 - - -, f 5;
-#X floatatom 463 304 5 0 100 0 - - -, f 5;
-#X floatatom 496 304 5 0 100 0 - - -, f 5;
-#X floatatom 529 304 5 0 100 0 - - -, f 5;
+#X floatatom 6 305 5 0 100 0 - - -, f 5;
+#X floatatom 39 305 5 0 100 0 - - -, f 5;
+#X floatatom 72 305 5 0 100 0 - - -, f 5;
+#X floatatom 105 305 5 0 100 0 - - -, f 5;
+#X floatatom 147 305 5 0 100 0 - - -, f 5;
+#X floatatom 180 305 5 0 100 0 - - -, f 5;
+#X floatatom 213 305 5 0 100 0 - - -, f 5;
+#X floatatom 246 305 5 0 100 0 - - -, f 5;
+#X floatatom 289 305 5 0 100 0 - - -, f 5;
+#X floatatom 322 305 5 0 100 0 - - -, f 5;
+#X floatatom 355 305 5 0 100 0 - - -, f 5;
+#X floatatom 388 305 5 0 100 0 - - -, f 5;
+#X floatatom 430 305 5 0 100 0 - - -, f 5;
+#X floatatom 463 305 5 0 100 0 - - -, f 5;
+#X floatatom 496 305 5 0 100 0 - - -, f 5;
+#X floatatom 529 305 5 0 100 0 - - -, f 5;
 #X obj 4 250 r count;
 #X obj 3 268 hradio 35 1 0 16 empty empty empty 0 -8 0 10 -262144 -1
--1 5;
-#X obj 3 320 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
-#X obj 3 337 trg;
-#X obj 40 337 trg;
-#X obj 78 337 trg;
-#X obj 114 337 trg;
-#X obj 150 337 trg;
-#X obj 185 337 trg;
-#X obj 220 337 trg;
-#X obj 256 337 trg;
-#X obj 294 337 trg;
-#X obj 331 337 trg;
-#X obj 366 337 trg;
-#X obj 401 337 trg;
-#X obj 438 337 trg;
-#X obj 474 337 trg;
-#X obj 511 337 trg;
-#X obj 546 337 trg;
+-1 6;
+#X obj 3 321 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 3 338 trg;
+#X obj 40 338 trg;
+#X obj 78 338 trg;
+#X obj 114 338 trg;
+#X obj 150 338 trg;
+#X obj 185 338 trg;
+#X obj 220 338 trg;
+#X obj 256 338 trg;
+#X obj 294 338 trg;
+#X obj 331 338 trg;
+#X obj 366 338 trg;
+#X obj 401 338 trg;
+#X obj 438 338 trg;
+#X obj 474 338 trg;
+#X obj 511 338 trg;
+#X obj 546 338 trg;
 #X obj 522 355 noteout;
-#X obj 87 251 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
+#X obj 91 251 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
 10 -262144 -1 -1 16 256;
-#X obj 58 251 mod;
+#X obj 61 250 mod;
 #X obj 912 264 r count_x4;
 #X floatatom 912 298 5 0 0 0 - - -, f 5;
 #X text 1178 245 clear cc;
@@ -1455,11 +1454,11 @@
 #X obj 989 264 mod;
 #X obj 1096 250 vradio 10 1 1 10 empty empty empty 0 -8 0 10 -262144
 -1 -1 9;
-#X obj 478 355 spigot;
-#X obj 238 251 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 474 355 spigot;
+#X obj 242 251 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X text 257 249 midi on/off;
-#N canvas 1772 126 854 500 er1-parameter-send 0;
+#X text 261 249 midi on/off;
+#N canvas 1855 71 854 500 er1-parameter-send 0;
 #X obj -370 25 inlet;
 #X obj -199 25 inlet;
 #X obj -370 78 s pitch2;
@@ -1498,13 +1497,13 @@
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 127 64 0 330 70 1 0 0;
-#X restore 576 264 graph;
+#X restore 578 264 graph;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array cc4 64 float 3;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 127 64 0 330 70 1 0 0;
-#X restore 576 368 graph;
+#X restore 578 368 graph;
 #X obj 912 368 r count_x4;
 #X floatatom 912 402 5 0 0 0 - - -, f 5;
 #X obj 1016 368 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8
@@ -1595,51 +1594,51 @@
 #X connect 7 0 16 0;
 #X connect 8 0 17 0;
 #X restore 199 431 pd er1-parameter-send;
-#X msg 412 354 38 127 10;
+#X msg 401 355 38 127 10;
 #X obj 912 281 tabread cc3;
 #X obj 912 385 tabread cc4;
 #X msg 1181 264 \; cc3 const 0 \;;
 #X msg 1180 370 \; cc4 const 0 \;;
-#X floatatom 6 512 5 0 100 0 - - -, f 5;
-#X floatatom 39 512 5 0 100 0 - - -, f 5;
-#X floatatom 72 512 5 0 100 0 - - -, f 5;
-#X floatatom 105 512 5 0 100 0 - - -, f 5;
-#X floatatom 147 512 5 0 100 0 - - -, f 5;
-#X floatatom 180 512 5 0 100 0 - - -, f 5;
-#X floatatom 213 512 5 0 100 0 - - -, f 5;
-#X floatatom 246 512 5 0 100 0 - - -, f 5;
-#X floatatom 289 512 5 0 100 0 - - -, f 5;
-#X floatatom 322 512 5 0 100 0 - - -, f 5;
-#X floatatom 355 512 5 0 100 0 - - -, f 5;
-#X floatatom 388 512 5 0 100 0 - - -, f 5;
-#X floatatom 430 512 5 0 100 0 - - -, f 5;
-#X floatatom 463 512 5 0 100 0 - - -, f 5;
-#X floatatom 496 512 5 0 100 0 - - -, f 5;
-#X floatatom 529 512 5 0 100 0 - - -, f 5;
+#X floatatom 6 513 5 0 100 0 - - -, f 5;
+#X floatatom 39 513 5 0 100 0 - - -, f 5;
+#X floatatom 72 513 5 0 100 0 - - -, f 5;
+#X floatatom 105 513 5 0 100 0 - - -, f 5;
+#X floatatom 147 513 5 0 100 0 - - -, f 5;
+#X floatatom 180 513 5 0 100 0 - - -, f 5;
+#X floatatom 213 513 5 0 100 0 - - -, f 5;
+#X floatatom 246 513 5 0 100 0 - - -, f 5;
+#X floatatom 289 513 5 0 100 0 - - -, f 5;
+#X floatatom 322 513 5 0 100 0 - - -, f 5;
+#X floatatom 355 513 5 0 100 0 - - -, f 5;
+#X floatatom 388 513 5 0 100 0 - - -, f 5;
+#X floatatom 430 513 5 0 100 0 - - -, f 5;
+#X floatatom 463 513 5 0 100 0 - - -, f 5;
+#X floatatom 496 513 5 0 100 0 - - -, f 5;
+#X floatatom 529 513 5 0 100 0 - - -, f 5;
 #X obj 4 458 r count;
 #X obj 3 476 hradio 35 1 0 16 empty empty empty 0 -8 0 10 -262144 -1
--1 5;
-#X obj 3 528 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
-#X obj 3 545 trg;
-#X obj 40 545 trg;
-#X obj 78 545 trg;
-#X obj 114 545 trg;
-#X obj 150 545 trg;
-#X obj 185 545 trg;
-#X obj 220 545 trg;
-#X obj 256 545 trg;
-#X obj 294 545 trg;
-#X obj 331 545 trg;
-#X obj 366 545 trg;
-#X obj 401 545 trg;
-#X obj 438 545 trg;
-#X obj 474 545 trg;
-#X obj 511 545 trg;
-#X obj 546 545 trg;
+-1 6;
+#X obj 3 529 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 3 546 trg;
+#X obj 40 546 trg;
+#X obj 78 546 trg;
+#X obj 114 546 trg;
+#X obj 150 546 trg;
+#X obj 185 546 trg;
+#X obj 220 546 trg;
+#X obj 256 546 trg;
+#X obj 294 546 trg;
+#X obj 331 546 trg;
+#X obj 366 546 trg;
+#X obj 401 546 trg;
+#X obj 438 546 trg;
+#X obj 474 546 trg;
+#X obj 511 546 trg;
+#X obj 546 546 trg;
 #X obj 522 563 noteout;
-#X obj 87 459 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
+#X obj 90 459 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
 10 -262144 -1 -1 16 256;
-#X obj 58 459 mod;
+#X obj 61 458 mod;
 #X obj 912 472 r count_x4;
 #X floatatom 912 506 5 0 0 0 - - -, f 5;
 #X text 1178 453 clear cc;
@@ -1649,10 +1648,10 @@
 #X obj 989 472 mod;
 #X obj 1096 458 vradio 10 1 1 10 empty empty empty 0 -8 0 10 -262144
 -1 -1 9;
-#X obj 478 563 spigot;
-#X obj 238 459 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 474 563 spigot;
+#X obj 241 459 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X text 257 457 midi on/off;
+#X text 260 457 midi on/off;
 #N canvas 548 143 854 500 er1-parameter-send 0;
 #X obj -370 25 inlet;
 #X obj -199 25 inlet;
@@ -1692,13 +1691,13 @@
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 127 64 0 330 70 1 0 0;
-#X restore 576 472 graph;
+#X restore 578 472 graph;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array cc6 64 float 3;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 127 64 0 330 70 1 0 0;
-#X restore 576 576 graph;
+#X restore 578 576 graph;
 #X obj 912 576 r count_x4;
 #X floatatom 912 610 5 0 0 0 - - -, f 5;
 #X obj 1016 576 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8
@@ -1793,48 +1792,48 @@
 #X msg 1181 472 \; cc5 const 0 \;;
 #X obj 912 593 tabread cc6;
 #X msg 1180 578 \; cc6 const 0 \;;
-#X msg 412 562 40 127 10;
+#X msg 401 563 40 127 10;
 #X text 235 -1 bpm;
-#X floatatom 6 720 5 0 100 0 - - -, f 5;
-#X floatatom 39 720 5 0 100 0 - - -, f 5;
-#X floatatom 72 720 5 0 100 0 - - -, f 5;
-#X floatatom 105 720 5 0 100 0 - - -, f 5;
-#X floatatom 147 720 5 0 100 0 - - -, f 5;
-#X floatatom 180 720 5 0 100 0 - - -, f 5;
-#X floatatom 213 720 5 0 100 0 - - -, f 5;
-#X floatatom 246 720 5 0 100 0 - - -, f 5;
-#X floatatom 289 720 5 0 100 0 - - -, f 5;
-#X floatatom 322 720 5 0 100 0 - - -, f 5;
-#X floatatom 355 720 5 0 100 0 - - -, f 5;
-#X floatatom 388 720 5 0 100 0 - - -, f 5;
-#X floatatom 430 720 5 0 100 0 - - -, f 5;
-#X floatatom 463 720 5 0 100 0 - - -, f 5;
-#X floatatom 496 720 5 0 100 0 - - -, f 5;
-#X floatatom 529 720 5 0 100 0 - - -, f 5;
+#X floatatom 6 721 5 0 100 0 - - -, f 5;
+#X floatatom 39 721 5 0 100 0 - - -, f 5;
+#X floatatom 72 721 5 0 100 0 - - -, f 5;
+#X floatatom 105 721 5 0 100 0 - - -, f 5;
+#X floatatom 147 721 5 0 100 0 - - -, f 5;
+#X floatatom 180 721 5 0 100 0 - - -, f 5;
+#X floatatom 213 721 5 0 100 0 - - -, f 5;
+#X floatatom 246 721 5 0 100 0 - - -, f 5;
+#X floatatom 289 721 5 0 100 0 - - -, f 5;
+#X floatatom 322 721 5 0 100 0 - - -, f 5;
+#X floatatom 355 721 5 0 100 0 - - -, f 5;
+#X floatatom 388 721 5 0 100 0 - - -, f 5;
+#X floatatom 430 721 5 0 100 0 - - -, f 5;
+#X floatatom 463 721 5 0 100 0 - - -, f 5;
+#X floatatom 496 721 5 0 100 0 - - -, f 5;
+#X floatatom 529 721 5 0 100 0 - - -, f 5;
 #X obj 4 666 r count;
 #X obj 3 684 hradio 35 1 0 16 empty empty empty 0 -8 0 10 -262144 -1
--1 5;
-#X obj 3 736 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
-#X obj 3 753 trg;
-#X obj 40 753 trg;
-#X obj 78 753 trg;
-#X obj 114 753 trg;
-#X obj 150 753 trg;
-#X obj 185 753 trg;
-#X obj 220 753 trg;
-#X obj 256 753 trg;
-#X obj 294 753 trg;
-#X obj 331 753 trg;
-#X obj 366 753 trg;
-#X obj 401 753 trg;
-#X obj 438 753 trg;
-#X obj 474 753 trg;
-#X obj 511 753 trg;
-#X obj 546 753 trg;
+-1 6;
+#X obj 3 737 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+#X obj 3 754 trg;
+#X obj 40 754 trg;
+#X obj 78 754 trg;
+#X obj 114 754 trg;
+#X obj 150 754 trg;
+#X obj 185 754 trg;
+#X obj 220 754 trg;
+#X obj 256 754 trg;
+#X obj 294 754 trg;
+#X obj 331 754 trg;
+#X obj 366 754 trg;
+#X obj 401 754 trg;
+#X obj 438 754 trg;
+#X obj 474 754 trg;
+#X obj 511 754 trg;
+#X obj 546 754 trg;
 #X obj 522 771 noteout;
-#X obj 87 667 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
+#X obj 90 667 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
 10 -262144 -1 -1 16 256;
-#X obj 58 667 mod;
+#X obj 61 666 mod;
 #X obj 912 680 r count_x4;
 #X floatatom 912 714 5 0 0 0 - - -, f 5;
 #X text 1178 661 clear cc;
@@ -1844,10 +1843,10 @@
 #X obj 989 680 mod;
 #X obj 1096 666 vradio 10 1 1 10 empty empty empty 0 -8 0 10 -262144
 -1 -1 2;
-#X obj 478 771 spigot;
-#X obj 238 667 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 474 771 spigot;
+#X obj 241 667 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X text 257 665 midi on/off;
+#X text 260 665 midi on/off;
 #N canvas 548 143 854 500 er1-parameter-send 0;
 #X obj -370 25 inlet;
 #X obj -199 25 inlet;
@@ -1884,29 +1883,20 @@
 #X text 1109 742 wave;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array cc7 64 float 3;
-#A 0 0 0 0 0 0 0 0 0 0 1.81426 7.25705 10.8856 12.6998 14.5141 16.3284
-19.9569 23.5854 29.0282 32.6567 32.6567 36.2852 38.0995 43.5423 45.3565
-47.1708 48.9851 48.9851 48.9851 48.9851 48.9851 47.1708 47.1708 47.1708
-47.1708 45.3565 43.5423 43.5423 41.728 39.9137 38.0995 38.0995 38.0995
-38.0995 38.0995 38.0995 38.0995 39.9137 41.728 47.1708 50.7993 59.8706
-67.1277 72.5705 78.0132 81.6418 81.6418 81.6418 81.6418 81.6418 81.6418
-81.6418 85.2703 85.2703 0;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 127 64 0 330 70 1 0 0;
-#X restore 576 680 graph;
+#X restore 578 680 graph;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array cc8 64 float 3;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5.44292 9.07153 12.7001 14.5145
-16.3288 17.2359 18.1431 19.9574 19.9574 19.9574 19.9574 19.9574 19.9574
-19.9574 19.9574 19.9574 19.9574 19.9574 19.9574 21.7717 23.586 25.4003
-25.4003 29.0289 30.8432 34.4718 36.2861 39.9147 43.5434 45.3577 50.8006
-52.6149 58.0578 63.5007 68.9437 68.9437 74.3866 78.0152 81.6438 85.2724
-88.9011 90.7154 96.1583 99.7869 99.7869 103.416 103.416 107.044;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 127 64 0 330 70 1 0 0;
-#X restore 576 784 graph;
+#X restore 578 784 graph;
 #X obj 912 784 r count_x4;
 #X floatatom 912 818 5 0 0 0 - - -, f 5;
-#X obj 1016 784 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
-0 10 -262144 -1 -1 0 256;
+#X obj 1016 784 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8
+0 10 -262144 -1 -1 64 256;
 #X obj 989 784 mod;
 #N canvas 548 143 854 500 er1-parameter-send 0;
 #X obj -370 25 inlet;
@@ -1993,7 +1983,7 @@
 #X connect 7 0 16 0;
 #X connect 8 0 17 0;
 #X restore 199 847 pd er1-parameter-send;
-#X msg 412 770 41 127 10;
+#X msg 401 771 41 127 10;
 #X obj 912 697 tabread cc7;
 #X obj 912 801 tabread cc8;
 #X msg 1180 786 \; cc8 const 0 \;;
@@ -2009,39 +1999,25 @@
 0;
 #N canvas 0 50 1178 300 (subpatch) 0;
 #X array trigger 64 float 3;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.42854 7.14268
-11.4283 14.2854 18.571 19.9995 21.4281 22.8566 22.8566 22.8566 22.8566
-22.8566 22.8566 22.8566 22.8566 24.2851 24.2851 25.7137 28.5707 29.9993
-32.8563 34.2849 35.7134 35.7134 35.7134 37.142 37.142 38.5705 39.999
-42.8561 44.2846 47.1417 49.9988 54.2844 59.9985 62.8556 65.7127 68.5698
-69.9983 72.8554 78.5695;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 100 64 0 330 70 1 0 0;
 #X restore 5 885 graph;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array x_value 64 float 3;
-#A 0 0 0 0 0 0 0 0 0 0 1.15456 1.73184 2.88641 4.04097 4.04097 4.61825
-4.90689 5.19553 5.19553 5.19553 5.77282 6.92738 6.92738 8.08194 9.2365
-10.3911 10.9683 12.1229 12.7002 14.432 14.432 15.5866 16.1639 17.8957
-18.473 19.0503 19.0503 20.7821 22.514 23.0913 24.2458 25.4004 25.9777
-28.2868 31.7505 32.3278 35.2142 36.3687 39.2551 42.1416 40.987 43.2961
-43.8734 46.7598 49.069 53.1099 56.5736 58.8827 62.3464 67.542 73.3148
-80.2421 87.1695 94.0969 98.1378;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 127 64 0 280 220 1 0 0;
 #X restore 341 885 graph;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array y_value 64 float 3;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0.577279 1.73184 2.8864 3.75232 5.19551
-5.77279 7.50463 8.08191 9.81375 10.6797 12.7001 14.432 15.5865 16.7411
-17.8957 19.0502 20.2048 20.2048 21.9366 23.0912 24.823 25.4003 27.1321
-27.1321 28.5753 31.1731 31.7504 34.6368 36.9459 37.5232 38.6777 40.4096
-41.5641 42.7187 43.8732 45.0278 45.6051 46.7596 47.3369 49.0687 50.8006
-51.9551 53.1097 53.687 56.5734 61.7689 64.6553 76.2009 84.8601 102.178
-117.765 123.538;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 127 64 0 280 220 1 0 0;
 #X restore 626 884 graph;
 #X obj 915 890 r count_x4;
-#X floatatom 940 1028 5 0 0 0 - - -, f 5;
-#X floatatom 948 1069 5 0 0 0 - - -, f 5;
+#X floatatom 941 1028 5 0 0 0 - - -, f 5;
+#X floatatom 951 1069 5 0 0 0 - - -, f 5;
 #X obj 914 924 t b f;
 #X obj 914 908 tabread trigger;
 #X obj 914 1011 tabread x_value;
@@ -2055,8 +2031,8 @@
 #X obj 914 959 expr $i1 < $i2;
 #X obj 914 976 sel 1;
 #X obj 993 890 mod;
-#X obj 1021 890 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8
-0 10 -262144 -1 -1 0 256;
+#X obj 1021 890 nbx 5 14 -1e+037 1e+037 0 1 empty empty empty 0 -8
+0 10 -262144 -1 -1 64 256;
 #X obj 275 961 cnv 15 60 20 empty empty kp3 20 12 0 20 -233017 -66577
 0;
 #X msg 1027 1072 \; y_value const 0 \;;
@@ -2070,10 +2046,10 @@
 #X text 1004 663 step length;
 #X text 1004 767 step length;
 #X text 1019 873 step length;
-#X text 144 40 step length;
-#X text 144 249 step length;
-#X text 144 457 step length;
-#X text 144 665 step length;
+#X text 147 40 step length;
+#X text 148 249 step length;
+#X text 147 457 step length;
+#X text 147 665 step length;
 #X connect 1 0 3 0;
 #X connect 2 0 3 1;
 #X connect 3 0 4 0;
